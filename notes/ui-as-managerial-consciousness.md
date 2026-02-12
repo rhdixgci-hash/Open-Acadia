@@ -3,7 +3,7 @@
 
 ### Related research
 - [Labor Modeling in Operational Software Systems](./labor-modeling-in-software.md)
-- [Research Overview & Methodology](./README.md)
+- [Research Overview & Methodology](README.md)
 
 ---
 
