@@ -93,19 +93,16 @@ export default function Home() {
             <section className="py-24 bg-secondary/30">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
                     <p className="text-xs uppercase tracking-wider text-muted-foreground mb-6">
-                        با FAVEN وارد گفتگوی استراتژیک شوید.
-                    </p>
-                    <h1 className="text-5xl tracking-tight leading-tight mb-6">
                         دعوت به اقدام
                         اگر می‌خواهید:
+                    </p>
+                    <h1 className="text-5xl tracking-tight leading-tight mb-6">
+                        با FAVEN وارد گفتگوی استراتژیک شوید.
                     </h1>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-
                         در بازار شلوغ جلو بزنید،
                         اقتدار بسازید،
                         و درآمد پایدار طراحی کنید،
-
-
                     </p>
                 </div>
             </section>
