@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import './fonts.css';
+@import './theme.css';
+
+/* Smooth scrolling and institutional aesthetic refinements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--primary);
+  color: #000;
+}
