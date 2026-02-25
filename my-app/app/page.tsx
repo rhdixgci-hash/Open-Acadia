@@ -4,7 +4,33 @@ import { Footer } from "@/app/Footer";
 export default function Home() {
     return (
         <div className="main-center">
+            <section className="py-24 bg-secondary/20">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <h2 className="text-3xl mb-12 text-center">
+                        Proof of Impact
+                    </h2>
 
+                    <div className="grid md:grid-cols-3 gap-12">
+                        <div className="bg-card border border-border p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <h3 className="font-semibold text-xl text-primary">Revenue Model Redesign</h3>
+                            <p className="text-muted-foreground text-sm">Implemented SaaS revenue structure and lifecycle monetization.</p>
+                            <span className="text-accent font-bold text-2xl">+35% Revenue</span>
+                        </div>
+
+                        <div className="bg-card border border-border p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <h3 className="font-semibold text-xl text-primary">Conversion Funnel Optimization</h3>
+                            <p className="text-muted-foreground text-sm">Redesigned customer journey and onboarding flows.</p>
+                            <span className="text-accent font-bold text-2xl">+12% Conversion</span>
+                        </div>
+
+                        <div className="bg-card border border-border p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <h3 className="font-semibold text-xl text-primary">Decision Flow Alignment</h3>
+                            <p className="text-muted-foreground text-sm">Streamlined executive approvals and product roadmap decisions.</p>
+                            <span className="text-accent font-bold text-2xl">2x Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
             {/* HERO */}
             <section className="py-32 border-b border-border relative">
 

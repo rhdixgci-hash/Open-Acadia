@@ -1,18 +1,19 @@
-import Link from "next/link";
+import {ReactNode} from "react";
 
-export default function PageLayer({ children }) {
+export default function PageLayer({children}: { children: ReactNode }) {
     return (
-        <div className="relative min-h-screen flex flex-col justify-between">
+        <div className="relative min-h-screen flex flex-col justify-between w-full">
 
             {/* Top System Bar */}
-            <div className="flex justify-between items-center px-6 md:px-12 py-6 border-b border-border text-xs font-mono tracking-widest uppercase text-muted-foreground">
+            <div
+                className="flex justify-between items-center px-6 md:px-12 py-6 border-b border-border text-xs font-mono tracking-widest uppercase text-muted-foreground">
                 <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary animate-pulse" />
+                    <div className="w-2 h-2 bg-primary animate-pulse"/>
                     <span>Operational Status: Active</span>
                 </div>
 
                 <div className="hidden md:block text-right">
-                    Strategic Systems Advisory<br />
+                    Strategic Systems Advisory<br/>
                     SaaS | Revenue | Organizational Architecture
                 </div>
             </div>
@@ -23,8 +24,8 @@ export default function PageLayer({ children }) {
                 <div className="w-full max-w-6xl relative">
 
                     {/* Vertical Grid Lines (Subtle Structural Framing) */}
-                    <div className="absolute left-0 top-0 h-full w-px bg-border hidden lg:block" />
-                    <div className="absolute right-0 top-0 h-full w-px bg-border hidden lg:block" />
+                    <div className="absolute left-0 top-0 h-full w-px bg-border hidden lg:block"/>
+                    <div className="absolute right-0 top-0 h-full w-px bg-border hidden lg:block"/>
 
                     {children}
                 </div>
@@ -35,10 +36,10 @@ export default function PageLayer({ children }) {
             <div className="px-6 md:px-12 pb-8">
                 <div className="flex justify-between items-end">
                     <div className="w-24 h-px bg-border relative">
-                        <div className="absolute left-0 bottom-0 w-px h-3 bg-border" />
+                        <div className="absolute left-0 bottom-0 w-px h-3 bg-border"/>
                     </div>
                     <div className="w-24 h-px bg-border relative">
-                        <div className="absolute right-0 bottom-0 w-px h-3 bg-border" />
+                        <div className="absolute right-0 bottom-0 w-px h-3 bg-border"/>
                     </div>
                 </div>
 
