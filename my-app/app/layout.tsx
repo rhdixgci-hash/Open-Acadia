@@ -28,203 +28,79 @@ export default function RootLayout({
     return (
         <html lang="en" dir={"ltr"}>
         <body>
-        <header className={`bg-white p-8`}>
-            <div className={`h-[46vh] flex items-start justify-between gap-14 text-[#251b1b]`}>
-                <div className={`flex items-start gap-26`}>
-                    <div className={`flex items-start gap-12`}>
-                        <div className={``}>
-                            <Link className="group flex items-center gap-4" href="/">
-                                <div
-                                    className="w-10 h-10 border border-primary/50 flex items-center justify-center relative overflow-hidden group-hover:border-accent transition-colors">
-                                    <div className="absolute inset-0 bg-primary/10"></div>
-                                    <span
-                                        className="font-mono text-xs font-bold text-primary group-hover:text-accent">IM</span>
-                                </div>
-                                <div className="flex flex-col"><span
-                                    className="font-display font-bold text-sm tracking-wider uppercase text-foreground">Institutional Mediator</span><span
-                                    className="font-mono text-[10px] text-muted-foreground tracking-widest">STRATEGIC RESEARCH NODE</span>
-                                </div>
-                            </Link>
-                        </div>
-                        <ul className={`flex flex-col gap-16`}>
-                            <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                            >Team Lending
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className={`flex`}>
-                                        <Link
-                                            className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                            href="/"><span
-                                            className="relative z-10">METHODOLOGY</span>
-                                            <div
-                                                className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                        </Link>
-                                    </li>
-                                    <li className={`flex`}>
-                                        <Link
-                                            className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                            href="/"><span
-                                            className="relative z-10">METHODOLOGY</span>
-                                            <div
-                                                className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                        </Link>
-                                    </li>
-                                </ul>
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                                    >Team Lending
-                                        <ul className={`flex flex-col gap-2`}>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                                    >Team Lending
-                                        <ul className={`flex flex-col gap-2`}>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul className={`flex flex-col gap-16`}>
-                            <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                            >Team Lending
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className={`flex`}>
-                                        <Link
-                                            className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                            href="/"><span
-                                            className="relative z-10">METHODOLOGY</span>
-                                            <div
-                                                className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                        </Link>
-                                    </li>
-                                    <li className={`flex`}>
-                                        <Link
-                                            className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                            href="/"><span
-                                            className="relative z-10">METHODOLOGY</span>
-                                            <div
-                                                className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                        </Link>
-                                    </li>
-                                </ul>
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                                    >Team Lending
-                                        <ul className={`flex flex-col gap-2`}>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul className={`flex flex-col gap-2`}>
-                                    <li className="text-sm font-mono flex flex-col gap-5 items-start tracking-widest border-l-2 pl-4 transition-all border-transparent text-muted-foreground hover:text-gray-950 hover:border-border"
-                                    >Team Lending
-                                        <ul className={`flex flex-col gap-2`}>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                            <li className={`flex`}>
-                                                <Link
-                                                    className="relative py-2 text-xs font-mono tracking-widest transition-all group overflow-hidden text-muted-foreground hover:text-gray-600 hover:bg-white/5"
-                                                    href="/"><span
-                                                    className="relative z-10">METHODOLOGY</span>
-                                                    <div
-                                                        className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+        <header className="relative border-b border-border">
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+
+                {/* Top Meta Line */}
+                <div className="flex justify-between items-center mb-16">
+                    <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-primary animate-pulse"></div>
+                        <span className="font-mono text-xs text-muted-foreground tracking-widest uppercase">
+          Strategic System Online
+        </span>
                     </div>
-                    <div className={`flex flex-col gap-6 w-1/2`}>
-                        <h1 className={`text-3xl`}>
-                            home page
-                        </h1>
-                        <p className={`text-justify w-3/4`}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque beatae
-                            cumque ducimus enim harum inventore magnam minima nemo nisi odio praesentium quaerat
-                            quibusdam quidem rem sed veniam, vitae.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque beatae
-                            cumque ducimus enim harum inventore magnam minima nemo nisi odio praesentium quaerat
-                            quibusdam quidem rem sed veniam, vitae.
-                        </p>
+
+                    <nav
+                        className="hidden md:flex gap-10 font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                        <Link href="/services" className="hover:text-foreground transition-colors">
+                            Services
+                        </Link>
+                        <Link href="/cases" className="hover:text-foreground transition-colors">
+                            Cases
+                        </Link>
+                        <Link href="/method" className="hover:text-foreground transition-colors">
+                            Method
+                        </Link>
+                        <Link href="/contact" className="hover:text-foreground transition-colors">
+                            Contact
+                        </Link>
+                    </nav>
+                </div>
+
+                {/* Structural Title */}
+                <div className="max-w-4xl">
+                    <h1 className="font-display text-4xl md:text-6xl tracking-tight leading-tight mb-8">
+                        Product, Revenue & Organizational Architecture
+                        <span className="block text-muted-foreground text-2xl md:text-3xl mt-4">
+          for Software Companies Scaling in Competitive Markets
+        </span>
+                    </h1>
+
+                    <p className="text-muted-foreground text-base leading-relaxed max-w-2xl">
+                        We design structural alignment across product positioning, revenue systems,
+                        and institutional decision flows. Built for founder-led and growth-stage SaaS.
+                    </p>
+
+                    <div className="mt-12 flex gap-8 font-mono text-xs tracking-widest uppercase">
+                        <Link
+                            href="/contact"
+                            className="border-b border-primary text-primary pb-1 hover:opacity-80 transition"
+                        >
+                            Request Diagnostic
+                        </Link>
+
+                        <Link
+                            href="/cases"
+                            className="border-b border-border pb-1 hover:border-foreground transition"
+                        >
+                            View Results
+                        </Link>
                     </div>
                 </div>
-                <div>
-                    <Link href={`/`}>
-                        mail@us.com
-                    </Link>
-                </div>
+
             </div>
+
+            {/* Vertical structural lines to match PageLayer */}
+            <div className="absolute top-0 left-12 w-[1px] h-full bg-border pointer-events-none"/>
+            <div className="absolute top-0 right-12 w-[1px] h-full bg-border pointer-events-none"/>
+
         </header>
-        <main className={`flex items-center mx-auto`}>
+        <main className={`flex justify-center items-center mx-auto`}>
             <PageLayer>
-            {children}
+                {children}
             </PageLayer>
         </main>
-        <Footer/>
-
         </body>
         </html>
     );

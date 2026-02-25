@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/app/Footer";
 
@@ -7,72 +6,89 @@ export default function Home() {
         <div className="main-center">
 
             {/* HERO */}
-            <section className="py-28 bg-secondary/30">
-                <div className="max-w-5xl mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-display tracking-tight mb-6">
-                        Strategic Product Architecture & Revenue Systems for Scalable Software Companies
+            <section className="py-32 border-b border-border relative">
+
+                <div className="absolute top-0 left-12 w-[1px] h-full bg-border" />
+                <div className="absolute top-0 right-12 w-[1px] h-full bg-border" />
+
+                <div className="max-w-6xl mx-auto px-6 lg:px-12">
+
+                    <div className="mb-10 font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                        01 / Strategic Architecture Node
+                    </div>
+
+                    <h1 className="font-display text-5xl md:text-6xl tracking-tight leading-tight max-w-4xl mb-10">
+                        Product, Revenue & Organizational Architecture
+                        <span className="block text-2xl md:text-3xl text-muted-foreground mt-4">
+              for Competitive SaaS & Software Markets
+            </span>
                     </h1>
-                    <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                        We design high-performance product, revenue, and organizational systems
-                        for SaaS and technology companies operating in competitive markets.
-                        Our focus: positioning clarity, structural alignment, and measurable growth.
+
+                    <p className="text-muted-foreground max-w-2xl leading-relaxed mb-12">
+                        We design structural alignment across product positioning,
+                        monetization systems, and institutional decision flows.
+                        Built for founder-led and growth-stage technology companies.
                     </p>
 
-                    <div className="mt-10 flex justify-center gap-6">
-                        <Link href="/contact" className="px-6 py-3 bg-primary text-white text-sm uppercase tracking-wide">
-                            Request Strategic Diagnostic
+                    <div className="flex gap-10 font-mono text-xs tracking-widest uppercase">
+                        <Link
+                            href="/contact"
+                            className="border-b border-primary text-primary pb-1 hover:opacity-80 transition"
+                        >
+                            Request Diagnostic
                         </Link>
-                        <Link href="/cases" className="px-6 py-3 border border-border text-sm uppercase tracking-wide">
-                            View Case Studies
+
+                        <Link
+                            href="/cases"
+                            className="border-b border-border pb-1 hover:border-foreground transition"
+                        >
+                            View Case Results
                         </Link>
                     </div>
+
                 </div>
             </section>
 
 
-            {/* CORE SERVICES */}
-            <section className="py-24">
+            {/* CORE SYSTEMS */}
+            <section className="py-32">
+
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                    <h2 className="text-3xl mb-16 text-center">
-                        Core Strategic Services
-                    </h2>
 
-                    <div className="grid md:grid-cols-3 gap-12">
+                    <div className="mb-20 font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                        02 / Core Strategic Systems
+                    </div>
 
-                        <div>
-                            <h3 className="text-xl mb-4">
-                                Product Strategy & Market Positioning
+                    <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+
+                        <div className="p-12 bg-background">
+                            <h3 className="font-display text-2xl mb-6">
+                                Product Positioning
                             </h3>
-                            <ul className="text-muted-foreground space-y-2">
-                                <li>• Product-market alignment frameworks</li>
-                                <li>• SaaS differentiation strategy</li>
-                                <li>• Offer architecture & pricing logic</li>
-                                <li>• Competitive narrative positioning</li>
-                            </ul>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                Market differentiation, offer architecture, pricing logic,
+                                and narrative clarity for SaaS operating in saturated sectors.
+                            </p>
                         </div>
 
-                        <div>
-                            <h3 className="text-xl mb-4">
-                                Revenue Architecture & Growth Systems
+                        <div className="p-12 bg-background">
+                            <h3 className="font-display text-2xl mb-6">
+                                Revenue Architecture
                             </h3>
-                            <ul className="text-muted-foreground space-y-2">
-                                <li>• SaaS revenue model design</li>
-                                <li>• Conversion funnel optimization</li>
-                                <li>• Lifecycle monetization systems</li>
-                                <li>• B2B acquisition strategy</li>
-                            </ul>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                Conversion systems, lifecycle monetization,
+                                and scalable growth mechanics built for B2B software.
+                            </p>
                         </div>
 
-                        <div>
-                            <h3 className="text-xl mb-4">
-                                Organizational Design for Tech Teams
+                        <div className="p-12 bg-background">
+                            <h3 className="font-display text-2xl mb-6">
+                                Organizational Design
                             </h3>
-                            <ul className="text-muted-foreground space-y-2">
-                                <li>• Product team structure optimization</li>
-                                <li>• Decision-flow architecture</li>
-                                <li>• Leadership alignment systems</li>
-                                <li>• Operational scalability design</li>
-                            </ul>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                Decision-flow mapping, leadership alignment,
+                                and structural scalability for tech teams.
+                            </p>
                         </div>
 
                     </div>
@@ -81,42 +97,43 @@ export default function Home() {
 
 
             {/* DIFFERENTIATION */}
-            <section className="py-24 bg-secondary/30">
-                <div className="max-w-6xl mx-auto px-6 lg:px-12">
-                    <h2 className="text-3xl mb-16 text-center">
-                        How We Are Different
-                    </h2>
+            <section className="py-32 bg-secondary/30 border-t border-border border-b border-border">
 
-                    <div className="grid md:grid-cols-3 gap-10 text-justify">
+                <div className="max-w-6xl mx-auto px-6 lg:px-12">
+
+                    <div className="mb-20 font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                        03 / Structural Differentiation
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-16">
 
                         <div>
-                            <h4 className="mb-3 font-semibold">
+                            <h4 className="font-display text-xl mb-4">
                                 Structural Over Cosmetic
                             </h4>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                We do not provide surface-level innovation workshops.
-                                We redesign product, revenue, and decision systems to create durable competitive advantage.
+                                We redesign systems, not slides. Durable advantage
+                                comes from architecture, not innovation theatre.
                             </p>
                         </div>
 
                         <div>
-                            <h4 className="mb-3 font-semibold">
-                                Integrated, Not Fragmented
+                            <h4 className="font-display text-xl mb-4">
+                                Integrated Intelligence
                             </h4>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                Strategy, product, growth, and organization operate as one system.
-                                We eliminate silos and align execution with market positioning.
+                                Product, revenue, and organization operate as one
+                                aligned system. No fragmentation. No silos.
                             </p>
                         </div>
 
                         <div>
-                            <h4 className="mb-3 font-semibold">
+                            <h4 className="font-display text-xl mb-4">
                                 Designed for Complexity
                             </h4>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                We work with founder-led and scaling software companies
-                                navigating institutional complexity, competitive saturation,
-                                and structural growth barriers.
+                                Built for companies scaling inside competitive,
+                                saturated, institutionally complex markets.
                             </p>
                         </div>
 
@@ -125,36 +142,46 @@ export default function Home() {
             </section>
 
 
-            {/* STRATEGIC ENGAGEMENT MODEL */}
-            <section className="py-32 border-t border-border relative">
+            {/* ENGAGEMENT MODEL */}
+            <section className="py-32 relative">
+
+                <div className="absolute top-0 left-12 w-[1px] h-full bg-border" />
+                <div className="absolute top-0 right-12 w-[1px] h-full bg-border" />
+
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                    <h2 className="text-3xl mb-16">
-                        Engagement Model
-                    </h2>
 
-                    <div className="grid md:grid-cols-3 gap-12">
+                    <div className="mb-20 font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                        04 / Engagement Model
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-20">
 
                         <div>
-                            <h3 className="text-lg mb-3">01. Strategic Diagnostic</h3>
+                            <h3 className="font-display text-xl mb-4">
+                                01. Strategic Diagnostic
+                            </h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                2–4 week deep analysis of product positioning, revenue systems,
-                                and organizational structure. Deliverable: Strategic Architecture Blueprint.
+                                2–4 week structural audit. Deliverable:
+                                Strategic Architecture Blueprint.
                             </p>
                         </div>
 
                         <div>
-                            <h3 className="text-lg mb-3">02. Implementation Sprint</h3>
+                            <h3 className="font-display text-xl mb-4">
+                                02. Implementation Sprint
+                            </h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                8–12 week execution phase focused on revenue architecture,
-                                product clarity, and growth system alignment.
+                                Revenue system execution and product realignment
+                                over 8–12 weeks.
                             </p>
                         </div>
 
                         <div>
-                            <h3 className="text-lg mb-3">03. Strategic Partnership</h3>
+                            <h3 className="font-display text-xl mb-4">
+                                03. Strategic Partnership
+                            </h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                Ongoing executive-level advisory for scaling SaaS
-                                and high-growth software companies.
+                                Ongoing executive advisory for scaling SaaS teams.
                             </p>
                         </div>
 
@@ -163,20 +190,25 @@ export default function Home() {
             </section>
 
 
-            {/* CASE STUDY FRAMEWORK */}
-            <section className="py-16 border-b border-border">
+            {/* CASE FRAMEWORK */}
+            <section className="py-20 border-t border-border">
+
                 <div className="max-w-6xl mx-auto px-6 lg:px-12">
-                    <div className="bg-card border border-border p-10">
-                        <h3 className="text-xl mb-4">
-                            Case Study Framework
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                            Each case study documents: Market Context, Structural Challenge,
-                            Strategic Intervention, and Measurable Outcome
-                            (revenue growth, conversion improvement, or operational efficiency).
-                            Data is anonymized while preserving strategic clarity.
+
+                    <div className="border border-border p-12">
+
+                        <div className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-6">
+                            Case Documentation Protocol
+                        </div>
+
+                        <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+                            Each case maps: Market Context, Structural Constraint,
+                            Strategic Intervention, and Measurable Economic Outcome.
+                            Data anonymized. Structural clarity preserved.
                         </p>
+
                     </div>
+
                 </div>
             </section>
 
