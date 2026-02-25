@@ -6,7 +6,6 @@ export default function Header() {
         <header className="relative border-b border-border bg-background/80 backdrop-blur-md">
             <div
                 className="relative mx-auto px-6 lg:px-12 py-16 md:py-24 flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-
                 {/* Logo + Meta */}
                 <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
                     <Logo size={48}/>
