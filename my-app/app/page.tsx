@@ -4,18 +4,20 @@ import {Footer} from "@/app/Footer";
 
 export default function Home() {
     return (
-        <div className="">
+        <div className="main-center">
             <section className="py-24 bg-secondary/30">
                 <div className="max-w-4xl mx-auto px-6 lg:px-12">
-                    <p className="text-sm text-right uppercase tracking-wider text-muted-foreground mb-6">
-                        معماری رشد برای آژانس‌های پیشرو
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground mb-6">
+                        دعوت به اقدام
+                        اگر می‌خواهید:
                     </p>
-                    <h1 className="text-5xl text-right tracking-tight leading-tight mb-6">
-                        ما یک آژانس دیگر سئو یا طراحی نیستیم.
-                        ما زیرساخت رقابتی شما را بازطراحی می‌کنیم. </h1>
-                    <p className="text-lg text-right text-muted-foreground leading-relaxed">
-                        رقبا خدمات ارائه می‌دهند.
-                        ما معماری هم‌راستاسازی درآمد، دیده‌شدن و اقتدار طراحی می‌کنیم.
+                    <h1 className="text-5xl tracking-tight leading-tight mb-6">
+                        با FAVEN وارد گفتگوی استراتژیک شوید.
+                    </h1>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                        در بازار شلوغ جلو بزنید،
+                        اقتدار بسازید،
+                        و درآمد پایدار طراحی کنید،
                     </p>
                 </div>
             </section>
@@ -90,22 +92,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="py-24 bg-secondary/30">
-                <div className="max-w-4xl mx-auto px-6 lg:px-12">
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground mb-6">
-                        دعوت به اقدام
-                        اگر می‌خواهید:
-                    </p>
-                    <h1 className="text-5xl tracking-tight leading-tight mb-6">
-                        با FAVEN وارد گفتگوی استراتژیک شوید.
-                    </h1>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                        در بازار شلوغ جلو بزنید،
-                        اقتدار بسازید،
-                        و درآمد پایدار طراحی کنید،
-                    </p>
-                </div>
-            </section>
+
 
             <section className="py-12 border-b border-border">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -123,7 +110,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <Footer/>
         </div>
     );
 }
