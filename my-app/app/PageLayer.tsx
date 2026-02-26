@@ -1,62 +1,60 @@
-import "./globals.css";
-import PageLayer from "@/app/PageLayer";
+import { ReactNode } from "react";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function PageLayer({ children }: { children: ReactNode }) {
     return (
-        <html lang="en">
-        <head>
-            <title>FAVEN – Structural Product & Revenue Hub</title>
-            <meta name="description" content="FAVEN – A calm, structured, digital servicescape for scaling software companies. Align products, revenue, and organizational architecture." />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta charSet="UTF-8" />
-        </head>
-        <body className="bg-[var(--color-background)] text-[var(--color-foreground)] antialiased font-sans">
-        <div className="flex min-h-screen">
+        <div className="relative flex flex-col min-h-screen w-full sticky top-0">
 
-            {/* --- Fixed System Rail / Sidebar --- */}
-            <aside
-                className="fixed left-0 top-0 h-screen w-28 border-r border-[var(--color-border)] bg-[var(--color-secondary)] flex flex-col justify-between py-10 px-2"
-                role="navigation"
-                aria-label="Section navigation"
+            {/* --- Top System Bar --- */}
+            <header
+                className="flex justify-between items-center px-6 md:px-12 py-6 border-b border-[var(--color-border)] text-xs font-mono tracking-widest uppercase text-[var(--color-muted)] bg-[var(--color-secondary)]/50 backdrop-blur-sm"
+                role="banner"
+                aria-label="System status bar"
             >
-                {/* Logo / Branding */}
-                <div className="flex flex-col items-center gap-12">
-                    <div className="text-xl font-bold tracking-tight text-[var(--color-primary)]">
-                        FAVEN
-                    </div>
-
-                    {/* Section Navigation */}
-                    <nav className="flex flex-col gap-6 text-[11px] font-mono tracking-widest uppercase text-[var(--color-muted)]">
-                        <a href="#structure" className="hover:text-[var(--color-foreground)] transition">01</a>
-                        <a href="#revenue" className="hover:text-[var(--color-foreground)] transition">02</a>
-                        <a href="#organization" className="hover:text-[var(--color-foreground)] transition">03</a>
-                        <a href="#systems" className="hover:text-[var(--color-foreground)] transition">04</a>
-                        <a href="#evidence" className="hover:text-[var(--color-foreground)] transition">05</a>
-                        <a href="#access" className="hover:text-[var(--color-foreground)] transition">06</a>
-                    </nav>
+                <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-[var(--color-primary)] animate-pulse rounded-full" />
+                    <span>Operational Status: Active</span>
                 </div>
 
-                {/* Footer / Branding */}
-                <div className="text-[10px] font-mono tracking-widest uppercase text-[var(--color-muted)] text-center">
-                    Strategic System
+                <div className="hidden md:block text-right text-[var(--color-muted-foreground)]">
+                    Strategic Systems Advisory<br />
+                    SaaS | Revenue | Organizational Architecture
                 </div>
-            </aside>
+            </header>
 
-            {/* --- Main Content Chamber --- */}
-            <main className="ml-28 flex-1 flex justify-center">
-                <PageLayer>
+            {/* --- Main Scroll Chamber --- */}
+            <div className="flex-1 flex justify-center px-4 md:px-8 py-12 overflow-y-auto">
+                <div className="relative w-full max-w-6xl">
+
+                    {/* Vertical Structural Lines (Subtle Grid / Calm Sphere) */}
+                    <div className="absolute left-0 top-0 h-full w-px bg-[var(--color-border)] hidden lg:block" />
+                    <div className="absolute right-0 top-0 h-full w-px bg-[var(--color-border)] hidden lg:block" />
+
+                    {/* Content Chamber */}
                     <div
-                        className="scroll-chamber fade-in w-full max-w-6xl p-6 md:p-8"
+                        className="scroll-chamber fade-in space-y-16"
                         role="main"
-                        aria-label="Primary content"
+                        aria-label="Primary content area"
                     >
                         {children}
                     </div>
-                </PageLayer>
-            </main>
+                </div>
+            </div>
 
+            {/* --- Bottom Structural Footer --- */}
+            <footer className="px-6 md:px-12 pb-8 pt-6 border-t border-[var(--color-border)]">
+                <div className="flex justify-between items-end">
+                    <div className="w-24 h-px bg-[var(--color-border)] relative">
+                        <div className="absolute left-0 bottom-0 w-px h-3 bg-[var(--color-border)]" />
+                    </div>
+                    <div className="w-24 h-px bg-[var(--color-border)] relative">
+                        <div className="absolute right-0 bottom-0 w-px h-3 bg-[var(--color-border)]" />
+                    </div>
+                </div>
+
+                <div className="mt-6 text-center text-xs text-[var(--color-muted)] tracking-wide">
+                    © 2026 Strategic Product & Revenue Architecture Advisory
+                </div>
+            </footer>
         </div>
-        </body>
-        </html>
     );
 }
