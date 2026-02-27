@@ -1,174 +1,187 @@
-@import "tailwindcss";
+@import 'tailwindcss' source(none);
+@import 'tw-animate-css';
 
-@theme {
-    /* -----------------------------
-       Colors
-    ----------------------------- */
-    --color-background: #0f0f10;
-    --color-foreground: #eaeaea;
-    --color-primary: #3b82f6;
-    --color-accent: #10b981;
-    --color-muted: #999999;
-    --color-border: #292929;
-    --color-secondary: #1b1b1b;
-    --color-destructive: #ef4444;
-    --color-overlay: rgba(0,0,0,0.4);
+@source '../**/*.{js,ts,jsx,tsx}';
 
-    /* -----------------------------
-       Fonts
-    ----------------------------- */
-    --font-sans: 'Inter', sans-serif;
-    --font-mono: 'Fira Mono', monospace;
-    --font-display: 'Playfair Display', serif;
+@custom-variant dark (&:is(.dark *));
 
-    /* -----------------------------
-       Radius
-    ----------------------------- */
-    --radius-sm: 6px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px;
-    --radius-full: 9999px;
+:root {
+    --font-size: 16px;
 
-    /* -----------------------------
-       Shadows
-    ----------------------------- */
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
-    --shadow-lg: 0 8px 16px rgba(0,0,0,0.25);
-    --shadow-xl: 0 16px 32px rgba(0,0,0,0.3);
+    /* Axial Structura Palette */
+    --structura-void: #050505;
+    --structura-panel: #0a0a0a;
+    --structura-grid: #1a1a1a;
+    --structura-text: #e5e5e5;
+    --structura-muted: #888888;
+    --structura-primary: #3b82f6; /* Electric Blue */
+    --structura-accent: #10b981; /* Tech Green */
+    --structura-border: #262626;
+
+    /* Base mappings */
+    --background: var(--structura-void);
+    --foreground: var(--structura-text);
+
+    --card: var(--structura-panel);
+    --card-foreground: var(--structura-text);
+
+    --popover: var(--structura-panel);
+    --popover-foreground: var(--structura-text);
+
+    --primary: var(--structura-primary);
+    --primary-foreground: #ffffff;
+
+    --secondary: var(--structura-grid);
+    --secondary-foreground: var(--structura-text);
+
+    --muted: var(--structura-grid);
+    --muted-foreground: var(--structura-muted);
+
+    --accent: var(--structura-accent);
+    --accent-foreground: #000000;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: var(--structura-border);
+    --input: var(--structura-grid);
+    --ring: var(--structura-primary);
+
+    --radius: 0px; /* Brutalist/Structural feel */
+
+    --chart-1: var(--structura-primary);
+    --chart-2: var(--structura-accent);
+    --chart-3: #f59e0b;
+    --chart-4: #8b5cf6;
+    --chart-5: #ec4899;
+
+    --sidebar: var(--structura-panel);
+    --sidebar-foreground: var(--structura-text);
+    --sidebar-primary: var(--structura-primary);
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: var(--structura-grid);
+    --sidebar-accent-foreground: var(--structura-text);
+    --sidebar-border: var(--structura-border);
+    --sidebar-ring: var(--structura-primary);
 }
 
-/* -----------------------------
-   Base Styles
------------------------------- */
+:root {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--primary);
+    color: #000;
+}
+
+body {
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    text-transform: uppercase; /* Structural feel */
+}
+
+code, pre, .font-mono {
+    font-family: var(--font-mono);
+}
+
+.dark {
+    /* Dark mode is the default mode essentially */
+    --background: var(--structura-void);
+    --foreground: var(--structura-text);
+    --card: var(--structura-panel);
+    --card-foreground: var(--structura-text);
+    --popover: var(--structura-panel);
+    --popover-foreground: var(--structura-text);
+    --primary: var(--structura-primary);
+    --primary-foreground: #ffffff;
+    --secondary: var(--structura-grid);
+    --secondary-foreground: var(--structura-text);
+    --muted: var(--structura-grid);
+    --muted-foreground: var(--structura-muted);
+    --accent: var(--structura-accent);
+    --accent-foreground: #000000;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: var(--structura-border);
+    --input: var(--structura-grid);
+    --ring: var(--structura-primary);
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-md: calc(var(--radius) - 1px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 2px);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
 @layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
     body {
-        @apply bg-[var(--color-background)] text-[var(--color-foreground)] font-sans antialiased;
-        selection {
-            background-color: var(--color-primary);
-            color: var(--color-background);
-        }
-    }
-
-    h1,h2,h3,h4,h5,h6 {
-        font-family: var(--font-display);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: -0.5px;
-    }
-
-    a {
-        transition: color 0.3s ease;
-    }
-
-    /* -----------------------------
-       Scrollable Notebook / Theater
-    ----------------------------- */
-    .scroll-chamber {
-        @apply overflow-y-auto relative h-[calc(100vh-6rem)] rounded-lg p-8;
+        @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
         background-image:
-                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         background-size: 60px 60px;
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-primary) var(--color-secondary);
-    }
-    .scroll-chamber::-webkit-scrollbar {
-        width: 8px;
-    }
-    .scroll-chamber::-webkit-scrollbar-thumb {
-        background-color: var(--color-primary);
-        border-radius: var(--radius-full);
-    }
-    .scroll-chamber::-webkit-scrollbar-track {
-        background-color: var(--color-secondary);
     }
 
-    /* -----------------------------
-       Sidebar / Flagship Rail
-    ----------------------------- */
-    .flagship-sidebar {
-        @apply flex flex-col gap-8 bg-[var(--color-secondary)] text-[var(--color-foreground)] p-6 w-24 md:w-72 h-full sticky top-0 border-r border-[var(--color-border)] shadow-lg;
-    }
-    .flagship-sidebar a {
-        @apply font-mono text-xs uppercase tracking-widest text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors;
+    /* Structural Typography */
+    h1, h2, h3, h4, h5, h6 {
+        @apply tracking-tight uppercase;
     }
 
-    /* -----------------------------
-       Hero Section
-    ----------------------------- */
-    .flagship-hero-title {
-        @apply font-display text-3xl md:text-4xl lg:text-5xl tracking-tight leading-snug mb-4;
-    }
-    .flagship-hero-subtitle {
-        @apply text-[var(--color-muted)] text-sm md:text-base mb-6;
-    }
-    .flagship-hero-links {
-        @apply flex flex-wrap gap-4 font-mono text-xs tracking-widest uppercase;
-    }
-    .flagship-hero-links a {
-        @apply border-b pb-1 transition-all;
-    }
-    .flagship-hero-links .primary {
-        @apply border-b border-[var(--color-primary)] text-[var(--color-primary)] hover:opacity-80;
-    }
-    .flagship-hero-links .secondary {
-        @apply border-b border-[var(--color-border)] text-[var(--color-foreground)] hover:border-[var(--color-foreground)];
-    }
-
-    /* -----------------------------
-       Cards / Panels
-    ----------------------------- */
-    .calm-card {
-        @apply bg-[var(--color-secondary)] p-6 rounded-lg shadow-md border border-[var(--color-border)] transition-all;
-    }
-    .calm-card:hover {
-        @apply shadow-xl border-[var(--color-primary)];
-    }
-
-    /* -----------------------------
-       Buttons
-    ----------------------------- */
-    .calm-btn {
-        @apply px-4 py-2 rounded font-mono uppercase tracking-widest text-xs transition-all;
-    }
-    .calm-btn-primary {
-        @apply bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)/80];
-    }
-    .calm-btn-accent {
-        @apply bg-[var(--color-accent)] text-black hover:bg-[var(--color-accent)/90];
-    }
-
-    /* -----------------------------
-       Pulse / Glow indicators
-    ----------------------------- */
-    .pulse-glow {
-        @apply w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse;
-    }
-
-    /* -----------------------------
-       Footer
-    ----------------------------- */
-    footer {
-        @apply text-center text-xs text-[var(--color-muted)] tracking-wide py-4 border-t border-[var(--color-border)];
-    }
-
-    /* -----------------------------
-       Misc Enhancements
-    ----------------------------- */
-    .scroll-section {
-        @apply relative flex flex-col justify-center min-h-screen px-6 md:px-12 py-24 transition-all;
-    }
-
-    .scroll-section::before {
-        content: '';
-        @apply absolute w-1 h-full left-0 top-0 bg-[var(--color-border)] opacity-20 hidden lg:block;
-    }
-
-    /* Hover / Focus for accessibility */
-    a:focus {
-        outline: 2px dashed var(--color-accent);
-        outline-offset: 2px;
-    }
+    h1 { @apply text-4xl md:text-6xl lg:text-7xl; }
+    h2 { @apply text-3xl md:text-4xl; }
+    h3 { @apply text-2xl md:text-3xl; }
+    h4 { @apply text-xl; }
 }

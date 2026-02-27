@@ -1,164 +1,163 @@
+'use client'
+
 import Link from "next/link";
 
-export default function HomePage() {
+import {motion} from "motion/react";
+import {ArrowRight, Cpu, Network, Zap} from "lucide-react";
+import {NetworkDiagram} from "@/app/components/NetworkDiagram";
+
+export default function Page() {
     return (
-        <div className="flex min-h-screen bg-neutral-50 text-neutral-900 antialiased">
-            {/* Fixed Sidebar / System Rail */}
-            <aside className="fixed left-0 top-0 h-screen w-24 border-r border-neutral-200 flex flex-col justify-between py-10 bg-white/80 backdrop-blur-md">
-                {/* Top */}
-                <div className="flex flex-col items-center gap-12">
-                    <div className="text-lg font-semibold tracking-tight">FAVEN</div>
-                    <nav className="flex flex-col gap-6 text-[10px] font-mono tracking-widest uppercase text-neutral-500">
-                        <a href="#structure">01</a>
-                        <a href="#revenue">02</a>
-                        <a href="#organization">03</a>
-                        <a href="#systems">04</a>
-                        <a href="#evidence">05</a>
-                        <a href="#access">06</a>
-                    </nav>
-                </div>
-                {/* Bottom */}
-                <div className="text-[10px] font-mono tracking-widest uppercase text-neutral-400 text-center">
-                    Strategic System
-                </div>
-            </aside>
+        <div className="relative min-h-screen">
+            {/* Hero Section */}
+            <section className="relative h-screen flex flex-col justify-center px-6 lg:px-12 overflow-hidden">
+                {/* Background Network */}
+                <NetworkDiagram/>
 
-            {/* Content Chamber */}
-            <main className="ml-24 flex-1 flex justify-center w-full">
-                <div className="w-full max-w-6xl relative">
-                    {/* Floating vertical lines for structure */}
-                    <div className="absolute left-1/4 top-0 h-full w-px bg-border hidden lg:block" />
-                    <div className="absolute right-1/3 top-0 h-full w-px bg-border hidden lg:block" />
-
-                    {/* Sections / Vertical Scroll */}
-                    <section
-                        id="structure"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
+                <div className="relative z-10 max-w-5xl">
+                    <motion.div
+                        initial={{opacity: 0, y: 20}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8, ease: "easeOut"}}
                     >
-                        <div className="absolute left-0 top-1/3 w-2 h-2 bg-primary rounded-full animate-pulse" />
-                        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight mb-6">
-                            Structural Product & Revenue Design
+            <span
+                className="inline-block px-2 py-1 mb-6 border border-primary/30 bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">
+              :: System Status: Nominal ::
+            </span>
+
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter uppercase leading-[0.9] mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+                            Institutional <br/>
+                            <span
+                                className="text-stroke-1 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Mediation</span>
                         </h1>
-                        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed mb-8">
-                            Aligning product, revenue, and organizational flows for scaling software
-                            companies in competitive markets. Designed for founders, PMs, and growth
-                            teams.
+
+                        <p className="max-w-xl text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-10 border-l-2 border-primary/50 pl-6">
+                            Axial coding for the research-industry interface. <br/>
+                            Translating organizational ontologies into viable economic structures.
                         </p>
-                        <div className="flex flex-wrap gap-4 font-mono text-xs tracking-widest uppercase">
+
+                        <div className="flex flex-col sm:flex-row gap-4">
                             <Link
                                 href="/contact"
-                                className="border-b border-primary text-primary pb-1 hover:opacity-80 transition"
+                                className="group relative px-8 py-4 bg-primary text-primary-foreground font-mono text-sm uppercase tracking-wider overflow-hidden"
                             >
-                                Request Diagnostic
+                <span className="relative z-10 flex items-center gap-2">
+                  Initiate Protocol <ArrowRight size={16}/>
+                </span>
+                                <div
+                                    className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"/>
                             </Link>
+
                             <Link
-                                href="/cases"
-                                className="border-b border-border pb-1 hover:border-foreground transition"
+                                href="/method"
+                                className="group px-8 py-4 border border-border text-foreground font-mono text-sm uppercase tracking-wider hover:bg-white/5 transition-colors"
                             >
-                                View Results
+                                View Architecture
                             </Link>
                         </div>
-                    </section>
-
-                    <section
-                        id="revenue"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
-                    >
-                        <div className="absolute right-0 top-1/4 w-2 h-2 bg-accent rounded-full animate-pulse" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl tracking-tight mb-6">
-                            Our Services
-                        </h2>
-                        <ul className="list-disc pl-6 space-y-2 text-muted-foreground text-lg md:text-xl">
-                            <li>Product Architecture & Alignment</li>
-                            <li>Revenue & Pricing Strategy</li>
-                            <li>Organizational & Decision Flows</li>
-                            <li>Research & Evidence-Based Insights</li>
-                        </ul>
-                    </section>
-
-                    <section
-                        id="organization"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
-                    >
-                        <div className="absolute left-0 top-1/3 w-2 h-2 bg-primary rounded-full animate-pulse" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl tracking-tight mb-6">
-                            Evidence & Case Studies
-                        </h2>
-                        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed">
-                            Showcase structural implementations, impact metrics, and examples of SaaS
-                            scaling.
-                        </p>
-                    </section>
-
-                    <section
-                        id="systems"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
-                    >
-                        <div className="absolute right-0 top-1/3 w-2 h-2 bg-accent rounded-full animate-pulse" />
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl tracking-tight mb-6">
-                            Our Method
-                        </h2>
-                        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed">
-                            Evidence-driven, human-centered, and structurally aligned methods to
-                            optimize product, revenue, and organizational decisions.
-                        </p>
-                    </section>
-
-                    <section
-                        id="evidence"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
-                    >
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl tracking-tight mb-6">
-                            Insights & Blog
-                        </h2>
-                        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
-                            Articles, research findings, and thought leadership on scaling software
-                            enterprises.
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="/blogs"
-                                className="border-b border-primary text-primary pb-1 hover:opacity-80 transition"
-                            >
-                                Explore Blog
-                            </Link>
-                            <Link
-                                href="/seo"
-                                className="border-b border-border pb-1 hover:border-foreground transition"
-                            >
-                                SEO Hub
-                            </Link>
-                        </div>
-                    </section>
-
-                    <section
-                        id="access"
-                        className="min-h-screen flex flex-col justify-center items-start relative px-6 md:px-12 py-24 scroll-section"
-                    >
-                        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl tracking-tight mb-6">
-                            Join Our Network
-                        </h2>
-                        <p className="text-muted-foreground text-lg md:text-xl max-w-3xl leading-relaxed mb-6">
-                            Collaborate, learn, and connect with SaaS founders, PMs, researchers, and
-                            students in our hub.
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="/contact"
-                                className="border-b border-primary text-primary pb-1 hover:opacity-80 transition"
-                            >
-                                Contact Us
-                            </Link>
-                            <Link
-                                href="/blogs"
-                                className="border-b border-border pb-1 hover:border-foreground transition"
-                            >
-                                Learn More
-                            </Link>
-                        </div>
-                    </section>
+                    </motion.div>
                 </div>
-            </main>
+
+                {/* Scrolling Ticker */}
+                <div
+                    className="absolute bottom-0 left-0 right-0 h-12 bg-black border-t border-border flex items-center overflow-hidden">
+                    <motion.div
+                        className="flex gap-12 whitespace-nowrap text-xs font-mono text-muted-foreground uppercase tracking-widest"
+                        animate={{x: ["0%", "-50%"]}}
+                        transition={{duration: 20, repeat: Infinity, ease: "linear"}}
+                    >
+                        {[...Array(2)].map((_, i) => (
+                            <div key={i} className="flex gap-12">
+                                <span>// Strategic Analysis</span>
+                                <span>// Deep Tech Translation</span>
+                                <span>// Organizational Ontology</span>
+                                <span>// Venture Architecture</span>
+                                <span>// Innovation Systems</span>
+                                <span>// Institutional Logic</span>
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Grid Section - Domains */}
+            <section className="py-32 px-6 lg:px-12 border-t border-border relative">
+                <div className="absolute top-0 left-12 w-[1px] h-full bg-border"/>
+                <div className="absolute top-0 right-12 w-[1px] h-full bg-border"/>
+
+                <div className="max-w-7xl mx-auto">
+                    <div className="mb-20 flex items-end justify-between">
+                        <div>
+              <span className="text-primary font-mono text-xs tracking-widest uppercase mb-2 block">
+                01 // Strategic Domains
+              </span>
+                            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-tight">
+                                System Capabilities
+                            </h2>
+                        </div>
+                        <Link href="/domains"
+                              className="hidden md:flex items-center gap-2 text-xs font-mono uppercase text-muted-foreground hover:text-primary transition-colors">
+                            Full Index <ArrowRight size={14}/>
+                        </Link>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+                        <FeatureCard
+                            icon={<Network className="w-6 h-6 text-primary"/>}
+                            title="Ecosystem Architecture"
+                            desc="Mapping actor-networks and power structures within complex institutional environments."
+                        />
+                        <FeatureCard
+                            icon={<Cpu className="w-6 h-6 text-accent"/>}
+                            title="Ontology Translation"
+                            desc="Bridging the gap between academic rigor and market velocity through semantic alignment."
+                        />
+                        <FeatureCard
+                            icon={<Zap className="w-6 h-6 text-purple-500"/>}
+                            title="Venture Synthesis"
+                            desc="Constructing viable economic vehicles from raw scientific capability."
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Quote Section */}
+            <section className="py-32 px-6 lg:px-12 bg-secondary/20 border-y border-border">
+                <div className="max-w-5xl mx-auto text-center">
+                    <motion.div
+                        initial={{opacity: 0, scale: 0.95}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        viewport={{once: true}}
+                    >
+                        <p className="text-2xl md:text-4xl font-light leading-tight text-foreground/80 mb-8">
+                            "The interface between discovery and capital is not a market problem. It is a <span
+                            className="text-foreground font-normal border-b border-primary">structural</span> one."
+                        </p>
+                        <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+                            // System Directive 04
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+        </div>
+    );
+}
+
+function FeatureCard({icon, title, desc}: { icon: React.ReactNode, title: string, desc: string }) {
+    return (
+        <div className="group relative bg-background p-10 hover:bg-secondary/50 transition-colors">
+            <div className="mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                {icon}
+            </div>
+            <h3 className="text-xl font-display uppercase mb-4 group-hover:text-primary transition-colors">
+                {title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+                {desc}
+            </p>
+
+            {/* Hover decoration */}
+            <div className="absolute top-4 right-4 w-2 h-2 bg-primary/0 group-hover:bg-primary transition-colors"/>
         </div>
     );
 }
